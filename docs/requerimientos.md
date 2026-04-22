@@ -6,7 +6,7 @@ Un requerimiento funcional define las funciones específicas que un sistema debe
 
 | ID | Descripción | Prioridad | Estado |
 |---|---|---|---|
-| RF-001 | | Alta | Pendiente |
+| RF-001 | El sistema debe monitorear la disponibilidad de servidores y servicios básicos mediante ping y chequeos HTTP.| Alta | Pendiente |
 
 ## Requerimientos No Funcionales
 
