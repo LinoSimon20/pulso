@@ -13,6 +13,7 @@ Un requerimiento funcional define las funciones específicas que un sistema debe
 | RF-005 | El sistema debe almacenar métricas históricas por al menos 24 horas para análisis básico de tendencias. | Media | Pendiente
 | RF-006 | El sistema debe permitir la instalación y configuración sencilla de agentes en servidores monitoreados. | Alta | Pendiente
 | RF-007 | El sistema debe permitir definir umbrales personalizados para CPU, memoria y red. | Media | Pendiente
+| RF-008 | El sistema debe exportar reportes básicos de estado y métricas en formatos estándar (CSV o PDF). | Baja | Pendiente
 
 ## Requerimientos No Funcionales
 
