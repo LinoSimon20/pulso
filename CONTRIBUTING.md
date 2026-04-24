@@ -104,7 +104,7 @@ git push origin tipo/descripcion-corta
 3. Verifica el  destino del PR
    - Base repository: `sis-inf/pulso` → base `dev`
    - Head repository: `TU-USUARIO/pulso` → compare `tu-rama`
-
+4. Edita la descripción y el título del PR según los cambios que hayas realizado sin olvidarte de agregar al `Closes #` el numero del Issue que realizaste.
 ---
 
 ## Convención de commits
