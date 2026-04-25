@@ -3,7 +3,7 @@
 | ID | Requerimiento Asociado | Descripción del Caso | Precondiciones | Pasos | Resultado Esperado |
 |---|---|---|---|---|---|
 | CP-001 | RF-001 | Validar monitoreo de disponibilidad mediante ping y chequeos HTTP. | Servidor activo y accesible. | 1. Ejecutar monitoreo. 2. Verificar respuesta de ping/HTTP. | El sistema muestra estado “Disponible” si responde correctamente. |
-| CP-002 | RF-002 | | | | |
+| CP-002 | RF-002 | Validar recolección y visualización de métricas CPU, memoria y red. | Servidor con agente instalado. |  1. Iniciar agente. 2. Consultar panel de métricas. | El sistema muestra valores en tiempo real de CPU, memoria y red.  |
 | CP-003 | RF-003 | | | | |
 | CP-004 | RF-004 | | | | |
 | CP-005 | RF-005 | | | | |
