@@ -104,7 +104,7 @@ Se han seleccionado herramientas que garantizan la interoperabilidad y el rendim
 ## 5. Diagrama de Arquitectura
 El siguiente diagrama describe la interacción entre los componentes definidos para el sistema Pulso.
 
-```mermai
+```mermaid
 graph TD
     subgraph Nivel_Sistema_Host
         A[Agente Recolector] -->|Sonda de Hardware| B[CPU / RAM / Red]
