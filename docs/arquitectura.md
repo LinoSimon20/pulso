@@ -4,7 +4,7 @@
 
 | Módulo | Responsabilidad |
 |--------|----------------|
-| **Collector** | Recolecta métricas del sistema (CPU, RAM, disco, red) desde `/proc` y `/sys` |
+| **Collector** | Recolecta métricas del sistema (CPU, RAM, disco, red, procesos, temperatura y uptime) desde `/proc` y `/sys` |
 | **Storage** | Almacena las métricas en memoria o disco para análisis histórico |
 | **Analyzer** | Procesa las métricas y detecta anomalías o tendencias |
 | **API** | Expone las métricas vía HTTP para consultas externas |
@@ -85,7 +85,7 @@ Además de las métricas tradicionales de CPU, memoria y red, Pulso incorpora nu
 | **Temperature Collector** | Obtiene la temperatura del sistema desde sensores disponibles. |
 | **Uptime Collector** | Reporta el tiempo de actividad continuo del sistema. |
 | **Load Average Collector** | Obtiene el promedio de carga del sistema para diferentes intervalos de tiempo. |
-
+| **Process Collector** | Obtiene estadísticas de procesos del sistema, incluyendo procesos en ejecución, bloqueados y total de procesos mediante `/proc/stat` y `/proc/loadavg`. |
 ---
 
 ## 4. Tecnologías Utilizadas
