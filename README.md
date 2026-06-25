@@ -102,6 +102,37 @@ Para una guía completa de instalación consulte:
 
 ---
 
+## Compilación con AddressSanitizer
+
+AddressSanitizer (ASAN) es una herramienta para detectar errores de memoria como accesos inválidos, leaks de memoria, y otros problemas. Es más rápido que Valgrind y ideal para desarrollo.
+
+### Compilar tests con ASAN
+
+```bash
+cmake -S . -B build -DBUILD_TESTS=ON -DBUILD_WITH_ASAN=ON
+cmake --build build
+```
+
+### Ejecutar tests con ASAN
+
+```bash
+cd build
+ctest
+```
+
+O ejecutar un test específico:
+
+```bash
+./build/bin/test_types
+./build/bin/test_config
+./build/bin/test_storage
+```
+
+> [!NOTE]
+> AddressSanitizer solo se aplica a los tests. El build de producción no incluye los flags de ASAN para mantener el rendimiento.
+
+---
+
 ## Ejemplo de salida
 
 Ejecutar:
