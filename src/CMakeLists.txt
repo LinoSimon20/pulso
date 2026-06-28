@@ -24,6 +24,9 @@ target_sources(pulso PRIVATE
     utils/console_formatter.cpp
     utils/logging/logger.cpp
     utils/signal_handler.cpp
+    src/core/version.hpp
+    src/http/handler_version.hpp
+    src/http/handler_version.cpp
 )
 
 target_compile_features(pulso PRIVATE cxx_std_17)
