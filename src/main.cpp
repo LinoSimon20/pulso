@@ -21,6 +21,7 @@
 
 // Collectors
 #include "collectors/memory/ram_usage.hpp"
+#include "collectors/bateria/bateria_collector.hpp"
 #include "platform/linux/collector_cpu.hpp"
 // TODO: CollectorDisk y CollectorNetwork no implementan ICollector aún.
 //       Pendiente en issue separado.
@@ -169,6 +170,9 @@ int main(int argc, char* argv[]) {
     collectors.push_back(std::make_shared<pulso::collectors::CollectorCPU>());
     collectors.push_back(
         std::make_shared<pulso::collectors::memory::CollectorMemory>()
+    );
+    collectors.push_back(
+        std::make_shared<pulso::collectors::bateria::CollectorBateria>()
     );
     // TODO: agregar CollectorDisk y CollectorNetwork cuando implementen ICollector.
 
