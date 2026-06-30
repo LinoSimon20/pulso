@@ -9,6 +9,7 @@ target_sources(pulso PRIVATE
     collectors/network/net_usage.cpp
     collectors/loadavg/loadavg_collector.cpp
     collectors/procesos/proc_collector.cpp
+    collectors/procesos/top_procesos.cpp
     collectors/temperatura/temp_collector.cpp
     config/config.cpp
     core/SystemMonitor.cpp
