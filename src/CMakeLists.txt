@@ -2,6 +2,7 @@ add_executable(pulso main.cpp)
 
 target_sources(pulso PRIVATE
     cli/arg_parser.cpp
+    collectors/bateria/bateria_collector.cpp
     collectors/cpu/cpu_usage.cpp
     collectors/disk/disk_usage.cpp
     collectors/memory/ram_usage.cpp
