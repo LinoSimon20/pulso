@@ -14,6 +14,7 @@ namespace pulso::formatters {
  * en un formato específico (JSON, Prometheus, etc.).
  */
 class IFormatter {
+    
 public:
     /**
      * @brief Destructor virtual por defecto.

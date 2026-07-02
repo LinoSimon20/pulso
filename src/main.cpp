@@ -62,7 +62,8 @@ void setupSignalHandler();
  */
 static int run_once_mode(
     const std::vector<std::shared_ptr<pulso::collectors::ICollector>>& collectors,
-    const std::string& format)
+    const std::string& format,
+    const std::string& filtro = "")
 {
     using pulso::utils::logging::Logger;
     auto& log = Logger::instancia();
@@ -104,7 +105,12 @@ static int run_once_mode(
         formatter = std::make_unique<pulso::formatters::FormatterPrometheus>();
     }
 
-    std::string output = formatter->formatear(snapshot);
+    // Filtro de presentacion: se aplica DESPUES de construir el snapshot
+    // completo, de modo que Storage siempre recibe todas las metricas.
+    const auto snapshot_presentacion =
+        pulso::core::filtrarSnapshot(snapshot, filtro);
+
+    std::string output = formatter->formatear(snapshot_presentacion);
 
     // 4. IMPRIMIR a stdout
     std::cout << output;
@@ -182,7 +188,7 @@ int main(int argc, char* argv[]) {
     // =========================================================================
     if (cli_opts.once)
     {
-        return run_once_mode(collectors, cli_opts.format);
+        return run_once_mode(collectors, cli_opts.format, cli_opts.filtro);
     }
 
     // =========================================================================

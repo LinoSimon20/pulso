@@ -13,8 +13,17 @@ namespace pulso::cli {
  */
 struct CliOptions {
     pulso::config::MonitorConfig monitor;
-    bool once = false;
+    bool once   = false;
     std::string format = "json";
+
+    /**
+     * @brief Patron glob para filtrar metricas en la salida formateada.
+     *        Solo aplica en modo --once (filtro de presentacion).
+     *        El snapshot completo se sigue guardando en Storage sin filtrar.
+     *        Cadena vacia = sin filtro (comportamiento actual).
+     *        Ejemplos: "cpu.*", "network.rx", "ram.*"
+     */
+    std::string filtro;
 };
 
 /**
@@ -25,6 +34,7 @@ struct CliOptions {
  * - --metrics <lista>
  * - --once
  * - --format json|csv|prometheus
+ * - --filtro <patron>
  * - -h, --help
  * - --version
  *

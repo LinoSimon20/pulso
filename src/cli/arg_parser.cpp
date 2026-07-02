@@ -50,6 +50,7 @@ void print_help()
     std::cout << "  --metrics <list>  Metricas a recolectar: cpu,ram,disk\n";
     std::cout << "  --once            Ejecutar una sola lectura y salir\n";
     std::cout << "  --format <fmt>    Formato de salida con --once: json|csv|prometheus\n";
+    std::cout << "  --filtro <patron> Filtrar metricas por nombre en --once (glob: cpu.*, network.rx)\n";
     std::cout << "  -h, --help        Mostrar ayuda\n";
     std::cout << "  --version         Mostrar version\n";
 }
@@ -120,6 +121,15 @@ bool parse_arguments(int argc, char* argv[], pulso::cli::CliOptions& options)
                 return false;
             }
             options.format = fmt;
+        }
+        else if (arg == "--filtro")
+        {
+            if (i + 1 >= argc)
+            {
+                std::cerr << "Error: falta valor para --filtro\n";
+                return false;
+            }
+            options.filtro = argv[++i];
         }
         else if (arg == "--config")
         {
