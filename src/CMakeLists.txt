@@ -16,6 +16,7 @@ target_sources(pulso PRIVATE
     core/SystemMonitor.cpp
     formatters/formatter_json.cpp
     formatters/formatter_prometheus.cpp
+    formatters/formatter_text.cpp
     http/handler_health.cpp
     http/handler_history.cpp
     http/handler_metrics.cpp
@@ -24,6 +25,7 @@ target_sources(pulso PRIVATE
     storage/schema.cpp
     storage/storage.cpp
     utils/console_formatter.cpp
+    utils/formato_bytes.cpp
     utils/logging/logger.cpp
     utils/signal_handler.cpp
 )
